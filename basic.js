@@ -1,1 +1,1 @@
-console.log("creat basic files");
+console.log("create basic files");
