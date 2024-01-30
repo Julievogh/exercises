@@ -1,0 +1,38 @@
+* {
+    border-radius: ;
+    background-color: antiquewhite;
+}
+
+main {
+display: grid;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+    color: rgb(149, 119, 69);
+    padding: 10px;
+
+}
+
+
+h3 {
+    font-size: 3rem;
+    color: rgb(217, 167, 67);
+}
+
+button {
+    font-size: 1.4rem;
+    align-self: center;
+    justify-self: center;
+    width: 30%;
+    height: auto;
+    border-radius: 14px;
+    border-color: rgb(205, 97, 70);
+    background-color: rgb(213, 70, 60);
+    color: white;
+    padding: 4px;
+}
