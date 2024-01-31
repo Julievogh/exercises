@@ -19,13 +19,13 @@ let tryAgain = (document.getElementById("tryagain").onclick = function () {
 console.log(currentRandomNumber);
 
 document.getElementById("submitguess").onclick = function (event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+  event.preventDefault();
 
   let x = document.getElementById("guessField").value;
   let resultText = document.getElementById("resultText");
 
   if (parseInt(x) === currentRandomNumber) {
-    resultText.innerHTML = "You guessed it right in " + guess + " GUESSES!";
+    resultText.innerHTML = "SÅDAN! Du gættede det på " + guess + " forsøg!";
   } else if (parseInt(x) < currentRandomNumber) {
     guess++;
     resultText.innerHTML = "Try a higher number!";

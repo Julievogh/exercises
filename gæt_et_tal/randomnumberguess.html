@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="randomnumberguess.css">
-</head>
+    <link rel="stylesheet" href="randomnumberguess.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>Random number generator</h1>
-        <h2>Guess a number between 0 - 100</h2>
+      <h1>Hvor god er du til at gætte?</h1>
+      <h2>Gæt et tal mellem 0 - 100</h2>
 
-        <div class="form">
-            <form class="form_guess">
-                Your guess:
-                <input type="text" id="guessField" class="guessField1">
+      
+      <div class="form">
+        <form class="form_guess">
+          Hvilket tal?:
+          <input type="text" id="guessField" class="guessField1" />
 
-                <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
-            </form>
-            <!-- Add this element where you want to display the result -->
-            
-            <h3 id="resultText"></h3>
-            <h3 id="number"></h3>
+          <input
+            type="submit"
+            value="Gæt!"
+            class="guessSubmit"
+            id="submitguess"
+          />
+        </form>
+        <!-- Add this element where you want to display the result -->
 
-            <button id="tryagain">Try again</button>
+        <h3 id="resultText"></h3>
+        <h3 id="number"></h3>
 
-        </div>
+        <button id="tryagain">Start forfra</button>
+      </div>
     </main>
     <script src="randomnumberguess.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,23 +1,57 @@
 * {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 
 body {
-    
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form #submitguess {
+  font-size: 1.1rem;
+  align-self: center;
+  justify-self: center;
+  width: 20%;
+  height: auto;
+  border-radius: 14px;
+  border-color: rgb(55, 43, 168);
+  background-color: rgb(75, 60, 213);
+  color: white;
+  padding: 4px;
+}
+
+#tryagain {
+  font-size: 1.4rem;
+  align-self: center;
+  justify-self: center;
+  width: 30%;
+  height: auto;
+  border-radius: 14px;
+  border-color: rgb(205, 97, 70);
+  background-color: rgb(213, 70, 60);
+  color: white;
+  padding: 4px;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(21, 82, 122);
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(146, 66, 66);
+  font-size: 1.2rem;
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
