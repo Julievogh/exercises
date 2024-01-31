@@ -25,7 +25,7 @@ document.getElementById("submitguess").onclick = function (event) {
   let resultText = document.getElementById("resultText");
 
   if (parseInt(x) === currentRandomNumber) {
-    resultText.innerHTML = "SÅDAN! Du gættede det på " + guess + " forsøg!";
+    resultText.innerHTML = "SÅDAN! Du gættede det i " + guess + " forsøg!";
   } else if (parseInt(x) < currentRandomNumber) {
     guess++;
     resultText.innerHTML = "Prøv et højere nummer!";
