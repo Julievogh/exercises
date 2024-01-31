@@ -27,10 +27,27 @@ console.log(s1 + s2);
 console.log(n1 + s2);
 console.log(s1 + n2);
 
-const value = ;
+const value = "true";
 
 if (value) {
   console.log("Value is truthy");
 } else {
   console.log("Value is falsy");
 }
+
+function sayHello(firstName, lastName) {
+  console.log(`Hello ${firstName} ${lastName}`);
+}
+
+sayHello();
+
+function presentPet(firstName, animalType, animalName) {
+  console.log(
+    `My name is ${firstName}, I have a ${animalType} called ${animalName}`
+  );
+}
+
+presentPet("Julie", "dog", "Mozart");
+
+
+console.log("Helllo", presentPet);

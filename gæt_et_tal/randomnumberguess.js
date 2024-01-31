@@ -6,7 +6,6 @@ function randomNumber(max) {
 
 let guess = 1;
 
-// Generate a random number initially
 let currentRandomNumber = randomNumber(101);
 let returnedNumber = document.getElementById("number");
 
