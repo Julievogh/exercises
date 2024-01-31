@@ -9,32 +9,34 @@
 
   <body>
     <main>
-      <h1>Hvor god er du til at gætte?</h1>
-      <h2>Gæt et tal mellem 0 - 100</h2>
+      <div class="container">
+        <h1>Hvor god er du til at gætte?</h1>
+        <h2>Gæt et tal mellem 0 - 100</h2>
 
-      <div class="box">
-        <div class="form">
-          <div class="form_element">
-            <div id="hvilkettal">
-              <label for="guessField">Hvilket tal?:</label>
+        <div class="form" id="box">
+          <div class="background">
+            <div class="form_element">
+              <div id="hvilkettal">
+                <label for="guessField">Hvilket tal?:</label>
+              </div>
+              <input type="text" id="guessField" class="guessField1" />
             </div>
-            <input type="text" id="guessField" class="guessField1" />
-          </div>
 
-          <div class="form_element">
-            <input
-              type="submit"
-              value="Gæt!"
-              class="guessSubmit"
-              id="submitguess"
-            />
+            <div class="form_element">
+              <input
+                type="submit"
+                value="Gæt!"
+                class="guessSubmit"
+                id="submitguess"
+              />
+            </div>
+
+            <h3 id="resultText">Lad os se hvor god du er!</h3>
+            <h3 id="number"></h3>
           </div>
         </div>
-
-        <h3 id="resultText">Lad os se hvor god du er!</h3>
-        <h3 id="number"></h3>
+        <button id="tryagain">Start forfra</button>
       </div>
-      <button id="tryagain">Start forfra</button>
     </main>
     <script src="randomnumberguess.js"></script>
   </body>

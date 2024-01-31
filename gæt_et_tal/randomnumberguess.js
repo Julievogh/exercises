@@ -1,6 +1,4 @@
-// prompt("Guess a number between 1 and 100:");
-
-//function guessedNumber() {
+"use strict";
 
 function randomNumber(max) {
   return Math.floor(Math.random() * max);
@@ -22,9 +20,12 @@ document.getElementById("submitguess").onclick = function (event) {
   event.preventDefault();
 
   let x = document.getElementById("guessField").value;
+  let changeElement = document.getElementById("box");
   let resultText = document.getElementById("resultText");
 
   if (parseInt(x) === currentRandomNumber) {
+    changeElement.id = "box2";
+
     resultText.innerHTML = "SÅDAN! Du gættede det i " + guess + " forsøg!";
   } else if (parseInt(x) < currentRandomNumber) {
     guess++;
@@ -34,18 +35,3 @@ document.getElementById("submitguess").onclick = function (event) {
     resultText.innerHTML = "Prøv et lavere nummer!";
   }
 };
-
-/*
-
-let guessedNumber = "";
-
-prompt(guessedNumber);
-
-if (randomNumber === parseInt(guessedNumber)) {
-  console.log("You guessed it!");
-} else if (randomNumber < parseInt(guessedNumber)) {
-  console.log("Too high!");
-} else if (randomNumber > parseInt(guessedNumber)) {
-  console.log("Too low!");
-}
-*/

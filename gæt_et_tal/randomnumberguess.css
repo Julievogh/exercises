@@ -1,5 +1,7 @@
 * {
-  background-color: antiquewhite;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,13 +10,47 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: antiquewhite;
 }
 
-.box {
-  border: 2px solid rgb(55, 43, 168);
+.container {
+  background-color: #9adae6;
+  border-radius: 20px;
+  padding: 60px;
+  margin-top: 20px;
+}
+
+.background {
+  background-color: #b3c3eb;
+}
+
+#box {
   border-radius: 10px;
   padding: 20px;
   margin-top: 20px;
+  background-color: #caddf3;
+}
+
+#box2 {
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%,
+    #2fc9e2 50%,
+    #1c7fee 60%,
+    #5f15f2 70%,
+    #ba0cf8 80%,
+    #fb07d9 90%,
+    #ff0000 100%
+  );
+
+  background-size: 200% 200%;
+  animation: anim 2s linear infinite;
 }
 
 .form {
@@ -30,9 +66,17 @@ body {
   font-size: 1.1rem;
 }
 
+input {
+  background-color: #ffffff;
+  padding: 10px;
+
+  font-size: 1.2rem;
+  width: 16%;
+}
+
 #hvilkettal {
-    margin-top: 8px;
-    margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .form_element #submitguess {
@@ -48,13 +92,14 @@ body {
 }
 
 #resultText {
-    font-size: 1.1rem;
-    font-style: italic;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 20px;
 }
 
 #tryagain {
-  font-size: 1.4rem;
-  width: 30%;
+  font-size: 0.8rem;
+  width: 20%;
   margin-top: 30px;
   height: auto;
   border-radius: 14px;
@@ -71,10 +116,17 @@ h1 {
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(146, 66, 66);
+  color: rgb(15, 20, 82);
   font-size: 1.2rem;
+  margin: 12px;
 }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes anim {
+  100% {
+    background-position-x: -200%;
+  }
 }
