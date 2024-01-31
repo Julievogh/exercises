@@ -10,29 +10,52 @@ body {
   text-align: center;
 }
 
+.box {
+  border: 2px solid rgb(55, 43, 168);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
 }
 
-.form #submitguess {
+.form_element {
+  margin-bottom: 10px;
+}
+
+.form_element label {
   font-size: 1.1rem;
-  align-self: center;
-  justify-self: center;
-  width: 20%;
+}
+
+#hvilkettal {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.form_element #submitguess {
+  font-size: 1.1rem;
+  width: 25%;
   height: auto;
   border-radius: 14px;
   border-color: rgb(55, 43, 168);
   background-color: rgb(75, 60, 213);
   color: white;
   padding: 4px;
+  margin-top: 10px;
+}
+
+#resultText {
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 #tryagain {
   font-size: 1.4rem;
-  align-self: center;
-  justify-self: center;
   width: 30%;
+  margin-top: 30px;
   height: auto;
   border-radius: 14px;
   border-color: rgb(205, 97, 70);
