@@ -11,11 +11,23 @@
 <body>
     <main>
         <h1>Random number generator</h1>
-        <h2>Gæt et tal</h2>
-        <form action="">
-            <input type="text">
-        </form>
-        
+        <h2>Guess a number between 0 - 100</h2>
+
+        <div class="form">
+            <form class="form_guess">
+                Your guess:
+                <input type="text" id="guessField" class="guessField1">
+
+                <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+            </form>
+            <!-- Add this element where you want to display the result -->
+            
+            <h3 id="resultText"></h3>
+            <h3 id="number"></h3>
+
+            <button id="tryagain">Try again</button>
+
+        </div>
     </main>
     <script src="randomnumberguess.js"></script>
 </body>
