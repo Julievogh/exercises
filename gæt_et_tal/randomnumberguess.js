@@ -28,10 +28,10 @@ document.getElementById("submitguess").onclick = function (event) {
     resultText.innerHTML = "SÅDAN! Du gættede det på " + guess + " forsøg!";
   } else if (parseInt(x) < currentRandomNumber) {
     guess++;
-    resultText.innerHTML = "Try a higher number!";
+    resultText.innerHTML = "Prøv et højere nummer!";
   } else if (parseInt(x) > currentRandomNumber) {
     guess++;
-    resultText.innerHTML = "Try a lower number!";
+    resultText.innerHTML = "Prøv et lavere nummer!";
   }
 };
 
