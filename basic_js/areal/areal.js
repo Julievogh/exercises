@@ -11,8 +11,7 @@ console.log(`Arealet er ${udregnRektangelAreal(500, 300)}`);
 
 // From sqM to sqF
 function convertSquareMToSquareFt(sqMeter) {
-  let fromSMtoSF = 10.76 * sqMeter;
-  return fromSMtoSF;
+  return 10.76 * sqMeter;
 }
 
 const sqMeterToConvert = 23;
@@ -21,3 +20,8 @@ console.log(
     sqMeterToConvert
   )}`
 );
+
+const arealToSquareFeet = convertSquareMToSquareFt(
+  udregnRektangelAreal(500, 300)
+);
+console.log(arealToSquareFeet);
