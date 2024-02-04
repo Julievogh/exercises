@@ -15,7 +15,6 @@
 
 // console.log(newarr);
 
-
 const people = ["Harry", "Ron", "Hermione"];
 
 let result;
@@ -41,17 +40,14 @@ console.log(result);
 
 console.log(people);
 
-
 const str = "abcdefghijklmn";
 const arr1 = str.split("");
 
 const str2 = "abcdefghijklmn";
 const arr2 = Array.from(str2);
 
-
 const str3 = "abcdefghijklmn";
 const arr3 = [...str3];
-
 
 console.log(str);
 console.log(str2);
@@ -60,3 +56,49 @@ console.log(str3);
 console.log(arr1);
 console.log(arr2);
 console.log(arr3);
+
+function greeting(firstname) {
+  return `Hello ${firstname}`;
+}
+
+const sayHi = greeting;
+
+console.log(sayHi("Julie"));
+
+console.log(greeting("Bob"));
+
+function congreet(firstname) {
+  console.log(`Hello ${firstname}`);
+}
+
+setTimeout(congreet, 2000, "Julie");
+
+function hire(person) {
+  console.log((person.hired = true));
+}
+
+function fire(person) {
+  person.hired = false;
+}
+
+const person3 = {
+  firstName: "Harry",
+  lastName: "Potter",
+  hired: false,
+};
+
+console.log(person3);
+
+const person4 = {
+  firstName: "Fred",
+  lastName: "Weasley",
+  hired: false,
+};
+
+console.log(person);
+
+hire(person);
+
+function hire2(person4) {
+  person.hired = true;
+}
