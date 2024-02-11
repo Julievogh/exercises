@@ -14,8 +14,10 @@ function goodToBadCurse(text) {
 
 document.querySelector(".profanity_btn").addEventListener("click", function () {
   const paragraph = document.querySelector(".profanity_txt");
-  console.log(paragraph.textContent);
+
   paragraph.textContent = goodToBadCurse(paragraph.textContent);
+
+  console.log(paragraph.textContent);
 });
 
 /*
