@@ -12,7 +12,11 @@ function goodToBadCurse(text) {
   return newText;
 }
 
-console.log(goodToBadCurse());
+document.querySelector(".profanity_btn").addEventListener("click", function () {
+  const paragraph = document.querySelector(".profanity_txt");
+  console.log(paragraph.textContent);
+  paragraph.textContent = goodToBadCurse(paragraph.textContent);
+});
 
 /*
 let theText =
@@ -21,9 +25,9 @@ let theText =
 let newText =
   "Programmering er sjovt! Men husk altid at bruge const, grid og just don't i moderne kodning.";
 */
-let findWord = theText.replaceAll("ord", "ting");
+/*let findWord = theText.replaceAll("ord", "ting");
 
-console.log(findWord);
+console.log(findWord);*/
 
 /*Find ordet "ord" i strengen theText og erstat den med ting 
 
