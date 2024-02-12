@@ -4,6 +4,24 @@ const curseWords = [
   { bad: "marquee", good: "just don't" },
 ];
 
+document
+  .querySelector("button")
+  .addEventListener("pointerdown", checkIfSentenceContainsProfanity);
+
+function checkIfSentenceContainsProfanity() {
+  let theText = document.querySelector("p").textContent;
+  curseWords.forEach((wordObj) => {
+    theText = theText.replaceAll(wordObj.bad, wordObj.good);
+
+    document.querySelector("p").textContent = theText;
+  });
+}
+
+
+
+
+
+/*
 function goodToBadCurse(text) {
   let newText = text;
   curseWords.forEach(function (pair) {
@@ -19,6 +37,9 @@ document.querySelector(".profanity_btn").addEventListener("click", function () {
 
   console.log(paragraph.textContent);
 });
+
+
+*/
 
 /*
 let theText =
@@ -38,3 +59,14 @@ Prøv med split / join.
 Prøv med replaceAll()
 
 console.log dit resultat*/
+
+
+document.querySelector(".bat_fox_btn").addEventListener("pointerdown",btnPointerDown);
+
+
+
+function btnPointerDown() {
+  document.querySelector("h1").dataset.filter="bat";
+}
+
+

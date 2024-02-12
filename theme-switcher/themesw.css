@@ -1,0 +1,39 @@
+[data-theme="light"] {
+  --font: Arial;
+  --bg: rgb(227, 211, 251);
+  --color: rgb(120, 214, 189);
+  --header-bg-col: rgb(218, 242, 218);
+  --header-col: rgb(157, 157, 226);
+  --footer-bg-col: rgb(183, 230, 183);
+  --footer-col: rgb(234, 217, 225);
+}
+
+[data-theme="dark"] {
+  --font: Times New Roman;
+  --bg: rgb(18, 18, 36);
+  --color: white;
+  --header-bg-col: rgb(39, 39, 27);
+  --header-col: rgb(205, 194, 196);
+  --footer-bg-col: rgb(165, 158, 158);
+  --footer-col: rgb(12, 10, 7);
+}
+
+[data-theme="party"] {
+  --font: Comic Sans MS;
+  --bg: rgb(147, 65, 179);
+  --color: rgb(182, 153, 51);
+  --header-bg-col: rgb(187, 41, 97);
+  --header-col: rgb(195, 147, 224);
+  --footer-bg-col: rgb(55, 170, 51);
+  --footer-col: rgb(226, 230, 199);
+}
+
+[data-theme="cute"] {
+  --font: Courier New;
+  --bg: rgb(145, 202, 221);
+  --color: rgb(255, 255, 255);
+  --header-bg-col: rgb(224, 132, 208);
+  --header-col: white;
+  --footer-bg-col: rgb(211, 173, 230);
+  --footer-col: red;
+}
