@@ -2,6 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", start);
 
+// Sådan kan man gøre for at få overblik
 const Animal = {
   name: "-default name",
   desc: "-no description",
@@ -9,47 +10,7 @@ const Animal = {
   age: 0,
 };
 
-/*
-const allAnimals = [
-  {
-    name: "Mandu",
-    desc: "amazing",
-    type: "cat",
-    age: 10,
-  },
-  {
-    name: "Mia",
-    desc: "black",
-    type: "cat",
-    age: 10,
-  },
-  {
-    name: "Leeloo",
-    desc: "growing",
-    type: "dog",
-    age: 3,
-  },
-  {
-    name: "Mandu",
-    desc: "toothless",
-    type: "dragon",
-    age: 14,
-  },
-  {
-    name: "Scoobydoo",
-    desc: "wondering",
-    type: "dog",
-    age: 58,
-  },
-  {
-    name: "Horsey",
-    desc: "horsing",
-    type: "horse",
-    age: 10,
-  },
-];
-
-*/
+const allAnimals = [];
 
 function start() {
   console.log("ready");
@@ -69,7 +30,8 @@ function loadJSON() {
 function prepareObjects(jsonData) {
   jsonData.forEach((jsonObject) => {
     // TODO: Create new object with cleaned data - and store that in the allAnimals array
-    const animal = object.create(Animal);
+    const animal = Object.create(Animal);
+    // const animal = new Object;
 
     // Extract data from JSON object
     const fullname = jsonObject.fullname;
@@ -77,7 +39,7 @@ function prepareObjects(jsonData) {
     const firstSpace = fullname.indexOf(" ");
 
     const secondSpace = fullname.indexOf(" ", firstSpace + 1);
-    const lastSpace = fullname.lastIndex(" ");
+    const lastSpace = fullname.lastIndexOf(" ");
 
     const name = fullname.substring(0, firstSpace);
     const desc = fullname.substring(secondSpace + 1, lastSpace);
@@ -141,9 +103,7 @@ function displayList() {
 
 function displayAnimal(animal) {
   // create clone
-  const clone = document
-    .querySelector("template#animal")
-    .content.cloneNode(true);
+  const clone = document.querySelector("template#animal").content.cloneNode(true);
 
   // set clone data
   clone.querySelector("[data-field=name]").textContent = animal.name;
