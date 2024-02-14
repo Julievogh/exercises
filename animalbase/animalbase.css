@@ -7,7 +7,7 @@
 }
 
 body {
-  margin: 10rem;
+  margin: 10rem 20rem;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -16,8 +16,6 @@ body {
   background-color: antiquewhite;
   border: solid 2px black;
 }
-
-
 
 #sorting th.sortby {
   text-decoration: underline;
@@ -35,7 +33,6 @@ body {
   font-size: 1.4rem;
   border-collapse: collapse;
   background-color: rgb(203, 223, 223);
-  
 }
 
 #list td {
@@ -45,16 +42,16 @@ body {
 #list td[data-field="star"] {
   cursor: pointer;
 
+  #list tbody tr td {
+    padding: 4px;
+  }
 
-#list tbody tr td {
-  padding: 4px;
-}
+  #list tbody tr:nth-child(odd) td {
+    background-color: lightblue;
+    border-right: rgb(240, 249, 255) 1px dotted;
+  }
 
-#list tbody tr:nth-child(odd) td {
-  background-color: lightblue;
-  border-right: rgb(240, 249, 255) 1px dotted;
-}
-
-#list tbody tr:nth-child(even) td {
-  border-right: rgb(171, 219, 252) 1px dotted;
+  #list tbody tr:nth-child(even) td {
+    border-right: rgb(171, 219, 252) 1px dotted;
+  }
 }
