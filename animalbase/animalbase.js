@@ -5,11 +5,13 @@ window.addEventListener("DOMContentLoaded", start);
 let allAnimals = [];
 
 // The prototype for all animals:
+// Model for each animal
 const Animal = {
   name: "",
   desc: "-unknown animal-",
   type: "",
   age: 0,
+  star: false,
 };
 
 const settings = {
@@ -47,8 +49,8 @@ async function loadJSON() {
 function prepareObjects(jsonData) {
   allAnimals = jsonData.map(prepareObject);
 
-  // TODO: This might not be the function we want to call first
-  displayList(allAnimals);
+  // fixed so we filter and sort on the first load
+  buildList();
 }
 
 function prepareObject(jsonObject) {
@@ -101,9 +103,7 @@ function selectSort(event) {
 
   // find "old" sortBy element and remove sortBy
 
-  const oldElement = document.querySelector(
-    `[data-sort='${settings.sortBy}']`
-  );
+  const oldElement = document.querySelector(`[data-sort='${settings.sortBy}']`);
   oldElement.classList.remove("sortby");
 
   // indicate active sort
@@ -184,6 +184,23 @@ function displayAnimal(animal) {
   clone.querySelector("[data-field=type]").textContent = animal.type;
   clone.querySelector("[data-field=age]").textContent = animal.age;
 
+  if (animal.star === true) {
+    clone.querySelector("[data-field=star]").textContent = "★";
+  } else {
+    clone.querySelector("[data-field=star]").textContent = "☆";
+  }
+
+  clone.querySelector("[data-field=star]").addEventListener("click", clickStar);
+
+  function clickStar() {
+    if (animal.star === true) {
+      animal.star = false;
+    } else {
+      animal.star = true;
+    }
+
+    buildList();
+  }
   // append clone to list
   document.querySelector("#list tbody").appendChild(clone);
 }

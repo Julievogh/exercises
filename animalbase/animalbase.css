@@ -6,6 +6,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  margin: 10rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  border: solid 2px black;
+}
+
+
+
 #sorting th.sortby {
   text-decoration: underline;
 }
@@ -19,8 +32,19 @@
 }
 
 #list {
+  font-size: 1.4rem;
   border-collapse: collapse;
+  background-color: rgb(203, 223, 223);
+  
 }
+
+#list td {
+  padding: 0.8rem;
+}
+
+#list td[data-field="star"] {
+  cursor: pointer;
+
 
 #list tbody tr td {
   padding: 4px;
