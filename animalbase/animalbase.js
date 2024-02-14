@@ -92,30 +92,34 @@ function selectSort(event) {
 function sortList(sortBy) {
   let sortedList = allAnimals;
 
-  if (sortBy === "name") {
-    sortedList = sortedList.sort(sortByName);
-  } else if (sortBy === "type") {
-    sortedList = sortedList.sort(sortByType);
+  //if (sortBy === "name") {
+
+  sortedList = sortedList.sort(sortByProperty);
+
+  //} else if (sortBy === "type") {
+  // sortedList = sortedList.sort(sortByProperty);
+  //}
+
+  function sortByProperty(animalA, AnimalB) {
+  
+    if (animalA[sortBy] < AnimalB[sortBy]) {
+      return -1;
+    } else {
+      return 1;
+    }
   }
 
   displayList(sortedList);
 }
 
-function sortByName(animalA, AnimalB) {
-  if (animalA.name < AnimalB.name) {
-    return -1;
-  } else {
-    return 1;
-  }
-}
-
+/*
 function sortByType(animalA, AnimalB) {
   if (animalA.type < AnimalB.type) {
     return -1;
   } else {
     return 1;
   }
-}
+}*/
 
 function displayList(animals) {
   // clear the list
