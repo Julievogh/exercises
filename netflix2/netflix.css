@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.button-container {
+  position: relative;
+}
+#nextButton {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#nextButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  color: rgb(9, 25, 40);
+  transition: width 0.3s ease-in-out;
+}
+
+#nextButton:hover::after,
+#nextButton:focus::after {
+  width: 100%;
+  opacity: 50%;
+}

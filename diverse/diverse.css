@@ -1,0 +1,28 @@
+html {
+}
+
+[data-theme="dark"] {
+  --font: Times New Roman;
+  --bg: rgb(18, 18, 36);
+  --color: white;
+  --header-bg-col: rgb(39, 39, 27);
+  --header-col: rgb(205, 194, 196);
+  --footer-bg-col: rgb(165, 158, 158);
+  --footer-col: rgb(12, 10, 7);
+}
+
+body {
+  font-family: var(--font, sans-serif);
+  background-color: var(--bg, white);
+  color: var(--color, black);
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--header-col);
+}
+
+footer {
+  background-color: var(--footer-bg-col);
+  color: var(--footer-col);
+}
