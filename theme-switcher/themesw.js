@@ -1,5 +1,3 @@
-document.querySelector("#themes").addEventListener("change", themeChange);
-
 const h2Texts = {
   dark: "This is the dark theme",
   light: "This is the light theme",
@@ -14,16 +12,41 @@ const imageIds = {
   cute: 631,
 };
 
-function themeChange(evt) {
-  console.log("change", evt.target.value);
-  document.querySelector("body").dataset.theme = evt.target.value;
+document.addEventListener("DOMContentLoaded", function () {
+
+  //tjek om der er theme
+  const storedTheme = localStorage.getItem("theme");
+
+// brug theme
+  if (storedTheme) {
+    applyTheme(storedTheme);
+  } 
+});
+
+document.querySelector("#themes").addEventListener("change", function (evt) {
+  const selectedTheme = evt.target.value;
+
+  // store theme
+  localStorage.setItem("theme", selectedTheme);
+
+  applyTheme(selectedTheme);
+});
+
+// ændr elementer
+function applyTheme(theme) {
+  document.querySelector("body").dataset.theme = theme;
 
   const changeH2 = document.querySelector("main h2");
-  changeH2.textContent = h2Texts[evt.target.value];
+  changeH2.textContent = h2Texts[theme];
 
-  const imageId = imageIds[evt.target.value];
+  const imageId = imageIds[theme];
   const image = document.querySelector("main img");
   image.src = `https://picsum.photos/id/${imageId}/400/400`;
 
   document.querySelector("body").style.fontFamily = `var(--font)`;
 }
+
+
+
+
+

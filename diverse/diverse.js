@@ -31,6 +31,8 @@
 
 // console.log(fullName2 + "_");
 
+/*
+
 const HPName = "Albus Percival Wulfric Brian Dumbledore";
 
 let specificName = HPName.substring(0, 5);
@@ -59,4 +61,34 @@ specificName = HPName.substring(2,5);
 
 console.log(specificName);
 
+*/
 
+// Local storage med dark theme
+
+const root = document.documentElement,
+  btn = document.querySelector("button");
+
+let isDark = localStorage.getItem("theme") === "dark";
+
+function applyTheme() {
+  if (isDark === true) {
+    root.dataset.theme = "dark";
+    localStorage.setItem("theme", "dark")
+  } else {
+    root.dataset.theme = "";
+    localStorage.removeItem("theme")
+  }
+}
+
+function toggleTheme() {
+  if (isDark === true) {
+    isDark = false;
+  } else {
+    isDark = true;
+  }
+
+  applyTheme();
+}
+applyTheme();
+
+btn.addEventListener("click", toggleTheme);

@@ -47,4 +47,6 @@ function showList() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 
+function addToDeletedList() {}
+
 showList();

@@ -11,7 +11,7 @@ body {
   position: relative;
 }
 #nextButton {
-  background-color: #333; /* initial color */
+  background-color: #333;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -25,14 +25,15 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; /* Initially no width */
+  width: 0;
   height: 100%;
-  background-color: white; /* color that fills the button */
+  background-color: white;
   color: rgb(9, 25, 40);
-  transition: width 0.3s ease-in-out; /* Transition width property */
+  transition: width 0.3s ease-in-out;
 }
 
 #nextButton:hover::after,
 #nextButton:focus::after {
-  width: 100%; /* When hovered or focused, fill the button */
+  width: 100%;
+  opacity: 50%;
 }
