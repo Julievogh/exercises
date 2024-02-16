@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lightness: 50%; /* Default lightness */
+  --saturation: 100%; /* Default saturation */
+}
+
+#color_container {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(325, var(--saturation), var(--lightness));
+}

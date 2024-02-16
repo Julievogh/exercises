@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next_episode_btn {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 2rem;
+   /* background-color: white;*/
+   background: linear-gradient(to right, white 50%, gray 50%);
+   background-size: 200% 100%;
+background-position: 0% 0%;
+animation: changeBackground 3s linear;
+}
+
+@keyframes changeBackground {
+    0%{ 
+        background-position: 100% 0%;
+}
+
+100% {
+    background-position: 0% 0%;
+}
+}
