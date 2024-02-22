@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do App</title>
     <script type="module" src="todo.js"></script>
-    <link rel="stylesheet" href="todo.css">
-</head>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
 
-<body>
-    <header>
-        <h1>HELLO</h1>
-    </header>
+  <body>
+    <header></header>
     <main>
-        <div class="to_do_container">
-            <div class="todo_app">
-                <h2>To-do list <img src="img/studying.png" alt=""></h2>
-                <div class="row">
-                    <input type="text" id="input_box" placeholder="Add your next to-do!">
-                    <button class="addTask_btn">Add</button>
-                </div>
+      <div class="to_do_container">
+        <div class="todo_app">
+          <div class="h2_img">
+            <div class="h2_txt">
+              <h2>To-do liste</h2>
+              <p>Hold styr på dine opgaver</p>
+            </div>
+            <img id="todo_img" src="img/studying.png" alt="" />
+          </div>
+          <div class="row">
+            <input
+              type="text"
+              id="input_box"
+              placeholder="Tilføj din næste opgave"
+            />
+            <button class="addTask_btn">Tilføj</button>
+          </div>
 
-                <ul id="list_container">
-                    <!-- <li class="checked">Task 1</li>
+          
+          <ul id="list_container">
+            <!-- <li class="checked">Task 1</li>
                     <li>Task 2</li>
                     <li>Task 3</li> -->
-                </ul>
-            </div>
-
-            <div class="deleted_tasks">
-                <button>Open deleted</button>
-                <ul id="deleted_list_container">
-                    <!-- <li class="del_task">Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li> -->
-                </ul>
-            </div>
-
+          </ul>
         </div>
 
+        <div class="deleted_tasks">
+          <button>Åbn slettede</button>
+          <div class="deleted_background">
+          <ul id="deleted_list_container">
+            <!-- <li class="del_task">Task 1</li>
+                
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+          </ul>
+          <p id="deleted_tasks_message" style="display: none">
+            Der er ingen slettede opgaver.
+          </p>
+          </div>
+          <button class="delete_list">Slet alle</button>
+        </div>
+      </div>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>
